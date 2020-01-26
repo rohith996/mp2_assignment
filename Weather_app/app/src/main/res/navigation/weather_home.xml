@@ -8,12 +8,12 @@
     <fragment
         android:id="@+id/montreal_frag"
         android:name="com.example.weather_data.Montreal_Fragment"
-        android:label="Montreal Fragment"
+        android:label="Montreal Weather"
         tools:layout="@layout/fragment_montreal" />
     <fragment
         android:id="@+id/delhi_frag"
         android:name="com.example.weather_data.Delhi_Fragment"
-        android:label="Delhi Fragment"
+        android:label="Delhi Weather"
         tools:layout="@layout/fragment_delhi" />
 
 </navigation>
