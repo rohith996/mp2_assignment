@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     }
 
     public boolean onSupportNavigateUp() {
-        return NavigationUI.navigateUp(drawerLayout,Navigation.findNavController(this,R.id.nav_fragment));
+        return NavigationUI.navigateUp(Navigation.findNavController(this,R.id.nav_fragment), drawerLayout);
     }
 
     public void onBackPressed() {
