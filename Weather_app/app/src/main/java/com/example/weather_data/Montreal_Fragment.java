@@ -80,15 +80,9 @@ public class Montreal_Fragment extends Fragment
 
 
                 Weather weather = response.body();
-                sources = new ArrayList<>(weather.getSources());
-                Parent parent = weather.getParent();
 
                 consolidatedWeather = new ArrayList<>(weather.getConsolidatedWeather());
 
-                bundle = new Bundle();
-
-                bundle.putString("bbc_url", sources.get(0).getUrl() + getArguments().getInt("bbcid"));
-                bundle.putString("city", weather.getTitle());
 
                 Date date = new Date();
                 String date1 = consolidatedWeather.get(0).getApplicableDate();
@@ -103,7 +97,7 @@ public class Montreal_Fragment extends Fragment
                 System.out.println("Date: " + today);
 
 
-                city.setText(weather.getTitle() + ",\n" + parent.getTitle() + " " + today);
+                city.setText(weather.getTitle() + "," + " " + today);
                 actual.setText(String.format("%.2f", consolidatedWeather.get(0).getTheTemp()) + "°C");
                 //f_min_max_temp.setText(String.format("%.2f",consolidatedWeather.get(0).getMaxTemp()) + "°" + "/" + String.format("%.2f",consolidatedWeather.get(0).getMinTemp()) + "°");
                 min.setText(String.format("%.2f", consolidatedWeather.get(0).getMinTemp()) + "°");
